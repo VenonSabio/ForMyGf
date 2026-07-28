@@ -8,3 +8,112 @@
 .final .gift{max-width:100%;white-space:normal}
 @media(max-width:520px){.intro-card,.quiz-card{padding:35px 20px;border-radius:26px}.answers{gap:11px}.answer{min-width:138px;padding:14px 13px}.question{margin-bottom:31px}.quiz-card{min-height:430px}.final{padding:26px 14px}.final-card{padding-bottom:46px}.final h2{margin:8px 0 15px}.final .eyebrow{font-size:.68rem}.final .letter{font-size:1.02rem}.final .gift-open{font-size:1rem}}
 @media(max-width:360px){.final{padding-inline:11px}.final h2{font-size:3rem}.final .code{font-size:1.25rem;padding-inline:13px}.final .letter{padding:14px 12px}}@media(prefers-reduced-motion:reduce){*,*:before{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+/* =========================
+   RESPONSIVE FINAL SCREEN
+   ========================= */
+
+.final {
+  display: block;
+  min-height: 100dvh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding: clamp(28px, 7vh, 64px) 16px;
+  background:
+    radial-gradient(circle at 18% 22%, rgba(255, 255, 255, 0.95) 0 1px, transparent 2px),
+    radial-gradient(circle at 73% 15%, rgba(255, 213, 168, 0.8) 0 1.3px, transparent 2.4px),
+    radial-gradient(circle at 42% 72%, rgba(255, 133, 184, 0.68) 0 1px, transparent 2px),
+    radial-gradient(ellipse at 50% 105%, rgba(119, 29, 111, 0.42), transparent 52%),
+    linear-gradient(180deg, #08071f 0%, #160724 55%, #08071f 100%);
+  background-size: 137px 173px, 211px 257px, 181px 149px, cover, cover;
+  background-position: 0 0, 37px 59px, 91px 26px, center, center;
+}
+
+.final::before {
+  display: none;
+}
+
+.final::after {
+  display: none;
+}
+
+.final-card {
+  width: min(720px, 100%);
+  margin: 0 auto;
+  padding: 8px 0 42px;
+  text-align: center;
+}
+
+.final h2 {
+  margin: 8px 0 15px;
+  font-size: clamp(3rem, 17vw, 6.5rem);
+  line-height: 0.95;
+  overflow-wrap: anywhere;
+}
+
+.final p {
+  padding-inline: 3px;
+  font-size: clamp(0.98rem, 4.4vw, 1.25rem);
+  line-height: 1.6;
+}
+
+.final .code {
+  display: inline-block;
+  max-width: 100%;
+  margin: 12px auto 20px;
+  padding: 11px clamp(16px, 7vw, 28px);
+  font-size: clamp(1.35rem, 8vw, 1.7rem);
+  letter-spacing: clamp(0.16em, 3vw, 0.3em);
+  overflow-wrap: anywhere;
+}
+
+.final .letter {
+  width: 100%;
+  max-width: 580px;
+  margin: 24px auto 0;
+  padding: 16px;
+  font-size: clamp(1rem, 4vw, 1.15rem);
+  overflow-wrap: anywhere;
+}
+
+.final .gift {
+  max-width: 100%;
+  white-space: normal;
+}
+
+.final .gift-open {
+  padding-inline: 8px;
+  font-size: clamp(1rem, 4vw, 1.1rem);
+}
+
+@media (max-width: 520px) {
+  .final {
+    padding: 26px 14px;
+  }
+
+  .final-card {
+    padding-bottom: 50px;
+  }
+
+  .final .eyebrow {
+    font-size: 0.68rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .final {
+    padding-inline: 11px;
+  }
+
+  .final h2 {
+    font-size: 3rem;
+  }
+
+  .final .code {
+    padding-inline: 13px;
+    font-size: 1.25rem;
+  }
+
+  .final .letter {
+    padding: 14px 12px;
+  }
+}
