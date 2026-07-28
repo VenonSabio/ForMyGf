@@ -1,0 +1,1 @@
+Open index.html in a browser. All visible website text is in English. No assets folder is required; visuals are generated in CSS and JavaScript.
